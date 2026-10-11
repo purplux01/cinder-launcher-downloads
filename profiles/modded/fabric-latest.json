@@ -1,0 +1,7 @@
+{
+  "id": "fabric-latest",
+  "name": "Fabric — latest release",
+  "type": "fabric",
+  "minecraftVersion": "latest-release",
+  "loaderVersionPolicy": "latest-compatible"
+}

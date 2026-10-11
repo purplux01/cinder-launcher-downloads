@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "launcher": {
+    "latestVersion": "0.3.1",
+    "releaseUrl": "https://github.com/purplux01/cinder-launcher-downloads/releases"
+  },
+  "sources": {
+    "minecraftVersionManifest": "https://piston-meta.mojang.com/mc/game/version_manifest_v2.json",
+    "fabricMeta": "https://meta.fabricmc.net/v2"
+  },
+  "profiles": [
+    {
+      "id": "vanilla-latest",
+      "name": "Vanilla — latest release",
+      "type": "vanilla",
+      "minecraftVersion": "latest-release"
+    },
+    {
+      "id": "vanilla-snapshot",
+      "name": "Vanilla — latest snapshot",
+      "type": "vanilla",
+      "minecraftVersion": "latest-snapshot"
+    },
+    {
+      "id": "fabric-latest",
+      "name": "Fabric — latest release",
+      "type": "fabric",
+      "minecraftVersion": "latest-release",
+      "loaderVersionPolicy": "latest-compatible"
+    }
+  ]
+}
