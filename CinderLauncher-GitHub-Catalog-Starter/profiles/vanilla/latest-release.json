@@ -1,0 +1,6 @@
+{
+  "id": "vanilla-latest",
+  "name": "Vanilla — latest release",
+  "type": "vanilla",
+  "minecraftVersion": "latest-release"
+}

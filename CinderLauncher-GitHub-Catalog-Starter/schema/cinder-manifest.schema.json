@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/purplux01/cinder-launcher-downloads/blob/main/schema/cinder-manifest.schema.json",
+  "title": "Cinder Launcher Hosted Catalog",
+  "type": "object",
+  "required": ["schemaVersion", "launcher", "profiles"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "launcher": {
+      "type": "object",
+      "required": ["latestVersion", "releaseUrl"],
+      "properties": {
+        "latestVersion": { "type": "string", "minLength": 1 },
+        "releaseUrl": { "type": "string", "format": "uri", "pattern": "^https://" }
+      },
+      "additionalProperties": true
+    },
+    "sources": { "type": "object", "additionalProperties": true },
+    "profiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "type", "minecraftVersion"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+          "name": { "type": "string", "minLength": 1 },
+          "type": { "enum": ["vanilla", "fabric"] },
+          "minecraftVersion": { "type": "string", "minLength": 1 },
+          "loaderVersionPolicy": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
